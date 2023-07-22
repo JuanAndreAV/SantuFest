@@ -3,6 +3,7 @@ let hamburguesa;
 let experiencia;
 let usuario;
 let identificacion;
+let factura;
 
 
 let rating=0
@@ -39,14 +40,17 @@ function calificarRestaurante(item){
 function mensaje() {
     usuario=document.getElementById("usuario").value;
     identificacion=document.getElementById("identificacion").value;
+    factura=document.getElementById("factura").value;
     alert(usuario+" calificaste: " +hamburguesa +" estrellas para hamburguesa "+" y "+experiencia+
-    " estrellas para experiencia en "+restaurante+" identificacion: "+identificacion) 
+    " estrellas para experiencia en "+restaurante+" identificacion: "+identificacion+" factura: "+factura) 
 
 }
 
 function nombreRestaurante (i) {
    restaurante=restaurantes[i]
    document.getElementById("esteRestaurante").innerText="Experiencia "+restaurante;
+    document.getElementById("h1votacion").innerText="Votación "+restaurante;
+    
 }
 
 
