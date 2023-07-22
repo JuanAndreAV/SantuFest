@@ -48,8 +48,8 @@ function mensaje() {
 
 function nombreRestaurante (i) {
    restaurante=restaurantes[i]
-   document.getElementById("esteRestaurante").innerText="Experiencia "+restaurante;
-    document.getElementById("h1votacion").innerText="Votación "+restaurante;
+   document.getElementById("esteRestaurante").innerText="Experiencia: "+restaurante;
+    document.getElementById("h1votacion").innerText="Votación: "+restaurante;
     
 }
 
