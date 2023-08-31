@@ -216,15 +216,6 @@
              
                <h6>Puntuación hamburguesa</h6>
               
-               <div class="puntuacion">
-
-                <i class="bi bi-star-fill" class="form-control"class= "star" onclick="calificarHamburguesa(this)" id="1h"required></i>
-               <i class="bi bi-star-fill" class= "star"onclick="calificarHamburguesa(this)" id="2h"></i>
-               <i class="bi bi-star-fill" class= "star"onclick="calificarHamburguesa(this)" id="3h"></i>
-               <i class="bi bi-star-fill" class= "star"onclick="calificarHamburguesa(this)" id="4h"></i>
-               <i class="bi bi-star-fill" class= "star"onclick="calificarHamburguesa(this)" id="5h"></i>
-               
-               </div><br>
                <h6 id="esteRestaurante">Experiencia: </h6>
                <div class="puntuacion">
                <i class="bi bi-star-fill" onclick="calificarRestaurante(this)" id="1r"></i>
@@ -247,7 +238,7 @@
                </div>
              </div><br>
                <div class="col-12">
-                  <button  type="submit" class="btn btn-primary"  onclick="mensaje()">Enviar</button>
+                  <input type="submit" class="btn btn-primary"  onclick="mensaje()">
                </div>
             </div>
             
@@ -276,16 +267,14 @@
        const forms = document.querySelectorAll('.needs-validation')
      
        // Loop over them and prevent submission
+       
        Array.from(forms).forEach(form => {
          form.addEventListener('submit', event => {
-           if (!form.checkValidity()) {
              event.preventDefault()
              event.stopPropagation()
-           }
-     
-           form.classList.add('was-validated')
          }, false)
        })
+       
      })()
        </script>
       

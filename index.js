@@ -1,29 +1,16 @@
 let restaurante;
-let hamburguesa;
-let experiencia;
+let experiencia = 0;
 let usuario;
 let identificacion;
-let factura;
+let telefono;
 
-
-let rating=0
 const restaurantes=["restaurante 1","restaurante 2","restaurante 3","restaurante 4"]
 
 
+const URL = "http://localhost:8080/api"
 
 
 
-
-function calificarHamburguesa(item){
-    hamburguesa=item.id[0];
-    let nombre=item.id.substring(1);
-    for(let i=0;i<5;i++)
-    if(i<hamburguesa){
-        document.getElementById((i+1)+nombre).style.color="gold";
-    }else{
-        document.getElementById((i+1)+nombre).style.color="#bbb";
-    }
-}
 function calificarRestaurante(item){
     experiencia=item.id[0];
     let nombre=item.id.substring(1);
@@ -34,15 +21,53 @@ function calificarRestaurante(item){
         document.getElementById((i+1)+nombre).style.color="#bbb";
     }
 }
+async function sendForm(){
+    try {
+        await fetch(URL + "/votes?" + new URLSearchParams({
+            restaurantId: restaurante,
+            invoiceId:telefono,
+            customerId: identificacion,
+            customerName: usuario,
+            productScore: 0,
+            attentionScore: experiencia
+        }), {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        })
+        .then((response) => {
+            getFromRestaurant(1);
+        });
+    } catch (e) {
+
+    }
+}
+
+async function getFromRestaurant(id){
+    try {
+        await fetch(URL + "/votes/restaurant/" + id, {
+            method: "GET"
+        }).then((response) => {
+            response.json().then(function(j) { 
+                console.log(j); 
+            });
+        }).catch(error => {
+            console.log(error);
+        });
+    } catch (e) {
+
+    }
+}
+
 
 
 
 function mensaje() {
     usuario=document.getElementById("usuario").value;
     identificacion=document.getElementById("identificacion").value;
-    factura=document.getElementById("factura").value;
-    alert(usuario+" calificaste: " +hamburguesa +" estrellas para hamburguesa "+" y "+experiencia+
-    " estrellas para experiencia en "+restaurante+" identificacion: "+identificacion+" factura: "+factura) 
+    telefono=document.getElementById("factura").value;
+    sendForm();
 
 }
 
