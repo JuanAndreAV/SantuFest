@@ -5,6 +5,7 @@ let identificacion;
 let telefono;
 
 const restaurantes=["restaurante 1","restaurante 2","restaurante 3","restaurante 4"]
+var caracteresEspeciales = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\|]/;
 
 
 const URL = "http://localhost:8080/api"
@@ -21,27 +22,33 @@ function calificarRestaurante(item){
         document.getElementById((i+1)+nombre).style.color="#bbb";
     }
 }
+
+//Envio de datos
 async function sendForm(){
-    try {
-        await fetch(URL + "/votes?" + new URLSearchParams({
+
+      try {
+            await fetch(URL + "/votes?" + new URLSearchParams({
             restaurantId: restaurante,
             invoiceId:telefono,
             customerId: identificacion,
             customerName: usuario,
             productScore: 0,
             attentionScore: experiencia
-        }), {
+            }), {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             }
-        })
-        .then((response) => {
-            getFromRestaurant(1);
-        });
-    } catch (e) {
-
-    }
+            })
+            .then((response) => {
+             getFromRestaurant(1);
+            });
+        } catch (e) {
+            alert("No pudimos procesar tu solicitud:",e);
+        
+        }
+    
+    
 }
 
 async function getFromRestaurant(id){
@@ -59,23 +66,98 @@ async function getFromRestaurant(id){
 
     }
 }
+//Limitar caracteres
+
+function limitarCaracteres (input, maxlength){
+    input.addEventListener("input",function(){
+if(input.value.length > maxlength){
+    input.value = input.value.slice(0,maxlength)
+}
+})
+}
+limitarCaracteres(document.getElementById("usuario"), 40);
+limitarCaracteres(document.getElementById("identificacion"), 10);
+limitarCaracteres(document.getElementById("telefono"), 10);
 
 
-
-
-function mensaje() {
+//Validación de datos
+function validar() {
     usuario=document.getElementById("usuario").value;
     identificacion=document.getElementById("identificacion").value;
-    telefono=document.getElementById("factura").value;
-    sendForm();
+    telefono=document.getElementById("telefono").value;
 
+    let parrafo1 = document.getElementById("parrafo1");
+    let parrafo2 = document.getElementById("parrafo2");
+    let parrafo3 = document.getElementById("parrafo3");
+    let parrafo4 = document.getElementById("parrafo4");
+    let parrafo5 = document.getElementById("parrafo5");
+    let input = document.getElementById("miCheckbox");
+
+    if (usuario===""){
+        parrafo1.setAttribute("style", "color:red",);
+        parrafo1.textContent= "Ingresa tu nombre";
+        return false;
+    } 
+    if (identificacion===""){
+        parrafo2.setAttribute("style", "color:red",);
+        parrafo2.innerText= "Ingresa tu identificacin";
+        return false;
+    }
+    if (telefono===""){
+        parrafo3.setAttribute("style", "color:red",);
+        parrafo3.innerText= "Ingresa un número de contacto";
+        return false;
+    }
+    if(experiencia==0){
+        parrafo4.setAttribute("style", "color:red",)
+        return false;
+    }
+    if (!input.checked){
+        parrafo5.setAttribute("style", "color:red",);
+        parrafo5.innerText= "Debes aceptar política de tratamiento de datos"
+        return false;
+    }
+    if (caracteresEspeciales.test(usuario)){
+        alert("No se permiten caracteres especiales");
+        return false;
+    }
+    else {
+        alert(usuario+" ,calificaste: "+experiencia+" Estrellas en "+restaurante+" .Tu identificacion: " +identificacion+ " y telefono: "+telefono)
+        sendForm()
+    }
+    
 }
+//Limitar caracteres
 
+function limitarCaracteres (input, maxlength){
+    input.addEventListener("input",function(){
+if(input.value.length > maxlength){
+    input.value = input.value.slice(0,maxlength)
+}
+})
+}
+limitarCaracteres(document.getElementById("usuario"), 40);
+limitarCaracteres(document.getElementById("identificacion"), 10);
+limitarCaracteres(document.getElementById("telefono"), 10);
+
+//Eleccion restaurante
 function nombreRestaurante (i) {
    restaurante=restaurantes[i]
    document.getElementById("esteRestaurante").innerText="Experiencia: "+restaurante;
-    document.getElementById("h1votacion").innerText="Votación: "+restaurante;
+    document.getElementById("h1votacion").innerText=restaurante;
     
+}
+//limpiar formulario
+
+function borrar(){
+    document.getElementById("usuario").value = "";
+    document.getElementById("identificacion").value = "";
+    document.getElementById("telefono").value = "";
+    parrafo1.innerText = "";
+    parrafo2.innerText = "";
+    parrafo3.innerText = "";
+    parrafo4.setAttribute("style", "color:#bbb",)
+    parrafo5.innerText = "";
 }
 
 
