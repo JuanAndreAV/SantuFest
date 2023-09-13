@@ -4,11 +4,21 @@ let usuario;
 let identificacion;
 let telefono;
 
+window.addEventListener('load', function () {
+ var spinner = document.getElementById('spinner');
+ spinner.classList.add('d-none');
+})
+window.addEventListener('DOMContentLoaded', function (){
+    var spinner = this.document.getElementById('spinner');
+    spinner.classList.remove('d-none');
+})
+
 const restaurantes=["restaurante 1","restaurante 2","restaurante 3","restaurante 4"]
 var caracteresEspeciales = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\|]/;
 
 
 const URL = "http://localhost:8080/api"
+
 
 
 
@@ -100,7 +110,7 @@ function validar() {
     } 
     if (identificacion===""){
         parrafo2.setAttribute("style", "color:red",);
-        parrafo2.innerText= "Ingresa tu identificacin";
+        parrafo2.innerText= "Ingresa tu identificación";
         return false;
     }
     if (telefono===""){
@@ -122,7 +132,7 @@ function validar() {
         return false;
     }
     else {
-        alert(usuario+" ,calificaste: "+experiencia+" Estrellas en "+restaurante+" .Tu identificacion: " +identificacion+ " y telefono: "+telefono)
+        alert(usuario+", calificaste: "+experiencia+" Estrellas en "+restaurante+" .Tu identificacion: " +identificacion+ " y telefono: "+telefono)
         sendForm()
     }
     
