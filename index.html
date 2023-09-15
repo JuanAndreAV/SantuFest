@@ -11,12 +11,44 @@
     
     
   </head>
+ 
+  <nav class="navbar navbar-expand-lg bg-body-tertiary"data-bs-theme="dark" >
+   <div class="container-fluid" id="header">
+      <a class="navbar-brand" href="#">
+         <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+         Santu Fest 2023
+       </a>
+     <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+       <ul class="navbar-nav">
+         <li class="nav-item">
+            <a class="navbar-brand" href="https://www.instagram.com/" >
+               <i class="bi bi-instagram"></i>
+            </a>
+         </li>
+         <li class="nav-item">
+            <a class="navbar-brand" href="https://www.facebook.com/">
+               <i class="bi bi-facebook"></i>
+            </a>
+         </li>
+         <li class="nav-item">
+            <a class="navbar-brand" href="#">
+               <i class="bi bi-twitter"></i>
+            </a>
+         </li>
+       </ul>
+     </div>
+   </div>
+ </nav>
 
   <body>
    <!--Header-->
    <header>
+
       
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!--  <nav class="navbar navbar-expand-lg bg-body-tertiary">
          
          
          <div class="container-fluid" id="header" >
@@ -38,6 +70,7 @@
             </div>   
          </div>
       </nav>
+      -->
    </header>
    <div id="spinner" class="d-none">
       <div class="d-flex justify-content-center">
@@ -46,7 +79,7 @@
           </div>
          </div>
    </div>
-   
+
    <!--/Header-->
    <!--Main-->
    <main id="main">
@@ -69,14 +102,14 @@
                         <p>Vive la experiencia gastronómica más esperada en este 2023... xx restaurantes presentarán su mejor
                            hamburguesa... texto texto texto texto texto texto texto texto
                            texto texto Vive la experiencia gastronómica más esperada en este 2023... xx restaurantes presentarán su mejor
-                           
                         </p>
-                        <a type="button" class="btn btn-success"href="https://www.google.com/maps/place/El+Santuario,+Antioquia/@6.1385591,-75.2696559,16z/data=!3m1!4b1!4m6!3m5!1s0x8e46a13ed4fe6c71:0xa49ea934abb1e510!8m2!3d6.1392039!4d-75.2636748!16s%2Fg%2F119w9r2z_?entry=ttu">Ubicación</a>
-
+                        <div id="video-container">
+                           <div id="close-button " onclick="closeVideo()">Cerrar</div>
+                           <iframe id="youtube-video" src="https://www.youtube.com/embed/r5yYDGc-D-8?si=A3v9AO7z7nXRNIqi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0"></iframe>
+                        </div>
+                        </div>
                      </div>
-
                   </div>
-
                </div>
             </div>
          </div>

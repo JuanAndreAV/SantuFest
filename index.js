@@ -19,8 +19,18 @@ var caracteresEspeciales = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\|]/;
 
 const URL = "http://localhost:8080/api"
 
+function closeVideo(){
+    var videoContainer = document.getElementById("video-container");
+    videoContainer.style.display ="none";
+}
+window.onload = function(){
+    var videoContainer = document.getElementById("video-container");
+    videoContainer.style.display = "flex";
+
+}
 
 
+//calificación
 
 function calificarRestaurante(item){
     experiencia=item.id[0];
