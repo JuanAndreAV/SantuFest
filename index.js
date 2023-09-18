@@ -29,7 +29,6 @@ window.onload = function(){
 
 }
 
-
 //calificación
 
 function calificarRestaurante(item){
