@@ -9,4 +9,13 @@ realizar una valoración de su experiencia.
 3. Instala las dependencias: `npm install`
 
 ## Uso
+Accede a la app web y accede a los diferentes enlaces
+explora la carta de cada producto y accede al formulario para registrar tu valoración de la experiencia
 
+## Tecnologías 
+
+HTML, CSS, Bootstrap y JavaScript
+
+##
+Juan Andres Alvarez Velasquez
+Daniel Quintero
