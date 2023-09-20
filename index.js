@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', function (){
     spinner.classList.remove('d-none');
 })
 
-const restaurantes=["restaurante 1","restaurante 2","restaurante 3","restaurante 4"]
+const restaurantes=["ANTICUARIO","DONDE DONDO","EL SECRETO","FRUTOS DEL PARAISO","GREEN BURGER","HOJARASCA","LYLY COOK", "MACUNA","Q2","THADDEUS"]
 var caracteresEspeciales = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\|]/;
 
 
