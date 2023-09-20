@@ -9,6 +9,10 @@ a {
    margin-top: 10px;
    color: rgb(240, 232, 232);
 }
+#logo {
+   height: 10%;
+   width: 10%;
+}
 
 /*#header  {
    display: flex;
