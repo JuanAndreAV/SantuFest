@@ -28,6 +28,17 @@ window.onload = function(){
     videoContainer.style.display = "flex";
 
 }
+//toggle texto
+function toggleTexto(parrafoId,a){
+    let parrafo = document.getElementById(parrafoId);
+    if(parrafo.style.maxHeight === "100px"){
+        parrafo.style.maxHeight = "none";
+        a.innerHTML = "Leer menos";
+    } else {
+        parrafo.style.maxHeight = "100px";
+        a.innerHTML = "Leer más";
+    }
+}
 
 //calificación
 
