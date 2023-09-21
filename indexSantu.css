@@ -76,6 +76,15 @@ color: white;
    color: white;
 }
 
+.parrafo {
+   overflow: hidden;
+   max-height: 100px;
+   transition: max-height 0.5s ease-out;
+}
+.botonTexto {
+   text-decoration:underline;
+   color: #1e5372;
+}
 
 #footer {
    background: linear-gradient(90deg,#1c3643 25%,#1e5372);
