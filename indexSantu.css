@@ -85,9 +85,7 @@ color: white;
    font-size: 20px;
    color: #2d3436;
  }
- .btn {
-   --bs-btn-border-color: var(--bd-violet-bg);
- }
+ 
 
 .parrafo {
    overflow: hidden;
@@ -100,7 +98,7 @@ color: white;
 }
 
 #footer {
-   background: linear-gradient(90deg,#1c3643 25%,#1e5372);
+   background: linear-gradient(90deg,#000000,#443e37);
 }
 
 #footer a {
