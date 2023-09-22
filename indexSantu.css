@@ -75,6 +75,19 @@ color: white;
 #politica {
    color: white;
 }
+ .card .restaurant-name{
+   font-family:'Playfair Display, serif';
+   font-size: 24px;
+   color: #e77f67;
+ }
+ .card .burger-name{
+   font-family:'Playfair Display, serif';
+   font-size: 20px;
+   color: #2d3436;
+ }
+ .btn {
+   --bs-btn-border-color: var(--bd-violet-bg);
+ }
 
 .parrafo {
    overflow: hidden;
