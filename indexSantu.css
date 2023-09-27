@@ -33,7 +33,7 @@ a {
 position: relative;
 }
 
-#carousel .overlay {
+/*#carousel .overlay {
 position: absolute;
 top: 0;
 bottom: 0;
@@ -41,13 +41,13 @@ left: 0;
 right: 0;
 border: rgba(0, 0, 0, 0.5);
 color: white;
-}
+}*/
 
 #carousel .overlay .container,
 #carousel .overlay .row {
    height: 100%;
 }
-#video-container {
+/*#video-container {
    position: fixed;
    top: 0;
    left: 0;
@@ -63,7 +63,7 @@ color: white;
    position: relative;
    z-index: 10000;
 }
-
+*/
 #close-button {
    position: absolute;
    top: 10px;
@@ -81,7 +81,7 @@ color: white;
  .card .restaurant-name{
    font-family:'Playfair Display, serif';
    font-size: 24px;
-   color: #e77f67;
+   color: #eb2e04;
  }
  .card .burger-name{
    font-family:'Playfair Display, serif';
@@ -101,7 +101,7 @@ color: white;
 }
 
 #footer {
-   background: linear-gradient(90deg,#ece5e2,#e9d0c4);
+   background: linear-gradient(90deg,#d3b08d,#7a4026);
 }
 
 #footer a {
