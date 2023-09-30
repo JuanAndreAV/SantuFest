@@ -19,7 +19,7 @@ var caracteresEspeciales = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\|]/;
 
 const URL = "http://localhost:8080/api"
 
-function closeVideo(){
+/*function closeVideo(){
     var videoContainer = document.getElementById("video-container");
     videoContainer.style.display ="none";
 }
@@ -27,7 +27,7 @@ window.onload = function(){
     var videoContainer = document.getElementById("video-container");
     videoContainer.style.display = "flex";
 
-}
+}*/
 //toggle texto
 function toggleTexto(parrafoId,a){
     let parrafo = document.getElementById(parrafoId);
