@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap&family=Capriola&family=Chela+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap&family=Capriola&family=Chela+One&display=swap&family=Mooli&display=swap');
 
 a {
    text-decoration: none;
@@ -91,6 +91,21 @@ color: white;
    font-size: 24px;
    color: #3f3621;
  }
+ .card .parrafo{
+   font-family: 'Mooli', sans-serif;
+ }
+ .guarnicion{
+   font-family: 'Mooli', sans-serif;
+   
+ }
+ .card-body{
+   background-image: url('./assets/lyly.png');
+   background-repeat: no-repeat;
+   background-size:15cqh;
+   background-position: right;
+   filter: grayscale(50%);
+
+ }
 
  #vegetariana{
    color: rgb(84, 143, 84);
@@ -104,7 +119,7 @@ color: white;
 }
 .botonTexto {
    text-decoration:underline;
-   color: #1e5372;
+   color: #050a0e;
 }
 
 #footer {
