@@ -98,14 +98,7 @@ color: white;
    font-family: 'Mooli', sans-serif;
    
  }
- .card-body{
-   background-image: url('./assets/lyly.png');
-   background-repeat: no-repeat;
-   background-size:15cqh;
-   background-position: right;
-   filter: grayscale(50%);
-
- }
+ 
 
  #vegetariana{
    color: rgb(84, 143, 84);
