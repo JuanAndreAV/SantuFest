@@ -53,34 +53,6 @@ function calificarRestaurante(item){
     }
 }
 
-//Envio de datos
-async function sendForm(){
-
-      try {
-            await fetch(URL + "/votes?" + new URLSearchParams({
-            restaurantId: restaurante,
-            invoiceId:telefono,
-            customerId: identificacion,
-            customerName: usuario,
-            productScore: 0,
-            attentionScore: experiencia
-            }), {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            }
-            })
-            .then((response) => {
-             getFromRestaurant(1);
-            });
-        } catch (e) {
-            alert("No pudimos procesar tu solicitud:",e);
-        
-        }
-    
-    
-}
-
 async function getFromRestaurant(id){
     try {
         await fetch(URL + "/votes/restaurant/" + id, {
@@ -152,7 +124,7 @@ function validar() {
         return false;
     }
     else {
-        alert(usuario+", calificaste: "+experiencia+" Estrellas en "+restaurante+" .Tu identificacion: " +identificacion+ " y telefono: "+telefono)
+
         sendForm()
     }
     
