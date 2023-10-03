@@ -152,8 +152,9 @@ function validar() {
         return false;
     }
     else {
-        
         sendForm()
+        alert("Gracias por tu calificación: SantuFest 2023!")
+        borrar()
     }
     
 }
@@ -189,7 +190,4 @@ function borrar(){
     parrafo4.setAttribute("style", "color:#bbb",)
     parrafo5.innerText = "";
 }
-
-
-
 
